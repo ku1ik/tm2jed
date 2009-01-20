@@ -17,10 +17,10 @@ class GlobHash
     to_check.each do |r|
       regexp = Regexp.new(r)
       newkey = @hash.keys.grep(regexp).first
-      puts "found key #{newkey} for #{key}" if newkey
+      debug "found key #{newkey} for #{key}" if newkey
       return newkey if newkey
     end
-    puts "key #{key} not found"
+    debug "key #{key} not found"
     key
   end
 

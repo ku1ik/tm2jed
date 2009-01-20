@@ -24,7 +24,6 @@ class JEditThemeWriter
 
   def add_style(name, style)
     if style.to_s =~ /missing prop/ || style.nil?
-      #puts style
       return
     end
     
@@ -42,7 +41,7 @@ class JEditThemeWriter
   
   def prepare
     add_comment "#{@theme.name} jEdit Editor Scheme"
-    add_comment "generated from textmate theme with tm2jed\n"
+    add_comment "generated from textmate theme with tm2jed (http://github.com/sickill/tm2jed/tree/master)\n"
     
     add_prop "scheme.name", @theme.name
     #add_prop "console.font", "Monospaced"
