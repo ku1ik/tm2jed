@@ -1,8 +1,8 @@
 #!/usr/bin/ruby
 
 require 'ostruct'
-require 'textmate_theme_reader'
-require 'jedit_theme_writer'
+require File.join(File.dirname(__FILE__), 'textmate_theme_reader.rb')
+require File.join(File.dirname(__FILE__), 'jedit_theme_writer.rb')
 
 def debug(msg)
   puts msg if DEBUG
