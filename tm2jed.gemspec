@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tm2jed}
-  s.version = "0.1"
+  s.version = "0.2"
   s.platform = Gem::Platform::RUBY
   s.date = %q{2009-07-29}
   s.authors = ["Marcin Kulik"]
@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.homepage = %q{http://sickill.net}
   s.summary = %q{Textmate to JEdit colour scheme converter}
-  s.files = [ "tm2jed.rb", "lib/tm2jed/jedit_theme_writer.rb", "lib/tm2jed/textmate_theme_reader.rb", "lib/tm2jed/rack_app.rb", "rack/config.ru" ]
-  # s.require_paths = ["lib"]
+  s.files = [ "lib/tm2jed.rb", "lib/tm2jed/jedit_theme_writer.rb", "lib/tm2jed/textmate_theme_reader.rb", "lib/tm2jed/rack_app.rb", "rack/config.ru" ]
+  s.require_paths = ["lib"]
 end
