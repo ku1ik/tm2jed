@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require File.join(File.dirname(__FILE__), '..', 'lib', 'tm2jed')
+
+unless src_filename = ARGV.shift
+  puts "You must specify source textmate theme filename!"
+  exit(1)
+end
+
+# read TM theme
+
+input = File.read(src_filename)
+
+# convert
+
+results = JEditThemeWriter.new(TextmateThemeReader.new(input).get_theme).get_theme
+
+# write to output file
+
+unless dst_filename = ARGV.shift
+  dst_filename = src_filename.gsub(/\.tmTheme$/, '.jedit-scheme')
+end
+
+File.open(dst_filename, "w") { |f| f.write(results) }

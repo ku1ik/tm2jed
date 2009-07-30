@@ -1,4 +1,5 @@
 require 'rexml/document'
+require 'ostruct'
 
 class GlobHash
   def initialize(hash)
@@ -17,10 +18,10 @@ class GlobHash
     to_check.each do |r|
       regexp = Regexp.new(r)
       newkey = @hash.keys.grep(regexp).first
-      debug "found key #{newkey} for #{key}" if newkey
+      puts "found key #{newkey} for #{key}" if newkey && $DEBUG
       return newkey if newkey
     end
-    debug "key #{key} not found"
+    puts "key #{key} not found" if $DEBUG
     key
   end
 
