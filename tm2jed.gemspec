@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.homepage = %q{http://sickill.net}
   s.summary = %q{Textmate to JEdit colour scheme converter}
-  s.files = [ "lib/tm2jed.rb", "lib/tm2jed/jedit_theme_writer.rb", "lib/tm2jed/textmate_theme_reader.rb", "rack/config.ru" ]
+  s.files = [ "tm2jed.rb", "lib/tm2jed/jedit_theme_writer.rb", "lib/tm2jed/textmate_theme_reader.rb", "lib/tm2jed/rack_app.rb", "rack/config.ru" ]
   # s.require_paths = ["lib"]
 end
